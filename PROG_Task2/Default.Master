@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="PROG_Task2.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:black">
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 1100px; margin: 0  auto;">
+                <tr style="width: 1100px; height: 50px; background-color: black">
+                    <td style="width: 142px">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/mdaka.png" Width="137px" />
+                    </td>
+                    <td style="width: 376px;">
+                        <asp:Label ID="Label1" runat="server" Text="Sounds Good" Font-Bold="True" Font-Names="Arial Black" Font-Size="35pt" ForeColor="White"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label2" runat="server" Text="AN ACME INC. DIVISION" Font-Bold="True" Font-Names="Arial" Font-Size="10pt" Font-Italic="False" ForeColor="White"></asp:Label>
+                    </td>
+                    <td align="right">
+                        <table >
+                            <tr>
+                                <td colspan="2" style="text-align: center; height: 35px; width:350px" align="center">
+                                    <asp:Label ID="Label5" runat="server" Font-Bold="True" Style="text-align: left; vertical-align: middle" Font-Italic="False" Font-Names="Arial" ForeColor="White" Height="35px"></asp:Label>
+                                    <br />
+                                    <asp:Button ID="Button2" runat="server" Text="Logout" BackColor="White" BorderColor="White" ForeColor="Black" Width="105px" Font-Names="Arial"
+                                        Font-Size="12px" Height="35px" Style="vertical-align: middle" OnClick="Button2_Click" BorderStyle="None" Font-Bold="True"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="auto-style2">
+                        <asp:Menu ID="Menu1" runat="server" Font-Names="Arial Black" Font-Size="XX-Large" ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="19px"
+                            Style="align-content: center" Font-Bold="False" Width="1150px">
+                            <DynamicHoverStyle BackColor="#4C4C4C" BorderColor="#4C4C4C" BorderStyle="Outset" ForeColor="White" Height="40px" />
+                            <DynamicMenuItemStyle Font-Bold="False" />
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Merch" Value="Merch" NavigateUrl="~/Merch.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Sign up" Value="Sign up" NavigateUrl="~/Register.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Account" Value="Account" NavigateUrl="~/Account.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Cart" Value="Cart" NavigateUrl="~/AddToCart.aspx"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#333333" BorderColor="#333333" ForeColor="White" />
+                            <StaticMenuItemStyle Font-Bold="True" Font-Size="Large" HorizontalPadding="64px" BackColor="#1E1E1E" />
+                            <StaticMenuStyle HorizontalPadding="0px" BackColor="Black" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr style="width: 1110px; height: 310px;">
+                    <td colspan="3">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick">
+                                </asp:Timer>
+                                <asp:Image ID="Image2" runat="server" BackColor="White" BorderColor="#CCCCCC" Height="270px" Width="1140px" ImageUrl="~/Images/1.jpg" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr style="width: 1100px; height: 25px; background-color: #1E1E1E; text-align: center; color: black">
+                    <td colspan="3">
+                        <asp:Label ID="Label3" runat="server" Text="© ACME INC. | ALL RIGHTS RESERVED" Font-Names="Arial" Font-Size="10pt" ForeColor="White"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>
